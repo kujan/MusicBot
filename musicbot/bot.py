@@ -2009,6 +2009,10 @@ class MusicBot(discord.Client):
                       "You might want to restart the bot if it doesn't start working.")
         
         current_entry = player.current_entry
+        current_title = player.get_title
+
+        if ("despacito" in current_title.lower()):
+            return Response("Despacito\nQuiero respirar tu cuello despacito\nDeja que te diga cosas al oído\nPara que te acuerdes si no estás conmigo\nDespacito\nQuiero desnudarte a besos despacito\nFirmo en las paredes de tu laberinto\nY hacer de tu cuerpo todo un manuscrito (sube, sube, sube)\n(Sube, sube)")
 
         if (param.lower() in ['force', 'f']) or self.config.legacy_skip:
             if author.id == self.config.owner_id \
